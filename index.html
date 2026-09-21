@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Algo para ti, de Deyvis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="galaxia.css">
+</head>
+<body>
+
+<div id="intro">
+  <p>Tengo algo<br>para ti</p>
+  <div class="pide">
+    <label for="nombre">Escribe tu nombre</label>
+    <input id="nombre" type="text" maxlength="30" autocomplete="off" autocapitalize="words" placeholder="Tu nombre">
+    <span id="aviso" class="aviso" role="alert"></span>
+  </div>
+  <button id="abrir" type="button">Abrir</button>
+</div>
+
+<div id="petalos" aria-hidden="true"></div>
+
+<main class="scene" id="escena">
+  <div class="glow"></div>
+  <div class="mensaje">
+    <h1 class="para" id="para"></h1>
+    <p id="texto" aria-live="polite"></p>
+    <p class="firma" id="firma"></p>
+    <button class="btn-galaxia" id="btnGalaxia" type="button">Descubre la galaxia ✨</button>
+  </div>
+  <div class="ramo" id="ramo" aria-label="Un ramo de rosas amarillas"></div>
+</main>
+
+<!-- Galaxia de flores -->
+<div id="galaxia" aria-hidden="true" tabindex="-1">
+  <canvas id="lienzo" aria-label="Galaxia de flores amarillas y palabras flotando"></canvas>
+  <button class="volver" id="volver" type="button">← Volver</button>
+  <p class="pista">Arrastra para explorar · toca el agujero negro</p>
+  <div class="velo" id="velo" aria-hidden="true">
+    <section class="tarjeta" role="dialog" aria-modal="true" aria-labelledby="tarjeta-titulo">
+      <h2 id="tarjeta-titulo"></h2>
+      <div id="tarjeta-texto"></div>
+      <button id="cerrar" type="button">Cerrar</button>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="galaxia.js"></script>
+</body>
+</html>
